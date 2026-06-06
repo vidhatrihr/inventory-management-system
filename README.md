@@ -1,7 +1,7 @@
 # Inventory Management System
 
 <p align="center">
-  <img src="assets/screenshot-1.png" alt="Inventory Management System" width="75%" />
+  <img src="assets/screenshot-3.png" alt="Inventory Management System" width="75%" />
 </p>
 
 A role-based web application for tracking stock, recording orders, and managing supplier and customer contacts.
