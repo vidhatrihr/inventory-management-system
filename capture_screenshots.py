@@ -43,11 +43,24 @@ inject_mac_ui = """() => {
     
     const appContainer = document.createElement('div');
     appContainer.style.flex = '1';
-    appContainer.style.overflow = 'auto';
+    appContainer.style.overflow = 'hidden'; // prevent scrolling if not needed
     appContainer.style.position = 'relative';
+    appContainer.style.display = 'flex';
+    appContainer.style.flexDirection = 'column';
+
+    // Override any 100vh constraints in the app
+    const style = document.createElement('style');
+    style.innerHTML = '.page-center { min-height: 100% !important; height: 100% !important; }';
+    document.head.appendChild(style);
 
     app.parentNode.insertBefore(captureArea, app);
     appContainer.appendChild(app);
+    
+    // Fix the 100vh issue so it centers perfectly in the new window
+    app.style.height = '100%';
+    app.style.minHeight = '100%';
+    app.style.width = '100%';
+
     macWindow.appendChild(appContainer);
     captureArea.appendChild(macWindow);
     
