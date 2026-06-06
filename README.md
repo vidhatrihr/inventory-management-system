@@ -1,7 +1,7 @@
 # Inventory Management System
 
 <p align="center">
-  <img src="assets/admin_products.png" alt="Inventory Management System" width="100%" style="border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;" />
+  <img src="assets/admin_products.png" alt="Inventory Management System" width="100%" />
 </p>
 
 A role-based web application for tracking stock, recording orders, and managing supplier and customer contacts.
@@ -106,19 +106,19 @@ Runs on `http://localhost:5173`.
 ## Screenshots
 
 Path: `/` — Login page
-<img src="assets/login_page.png" alt="Login page" width="100%" style="border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;" />
+<img src="assets/login_page.png" alt="Login page" width="100%" />
 
 Path: `/orders` — Admin Orders
-<img src="assets/admin_orders.png" alt="Admin Orders" width="100%" style="border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;" />
+<img src="assets/admin_orders.png" alt="Admin Orders" width="100%" />
 
 Path: `/products` — Admin Products
-<img src="assets/admin_products.png" alt="Admin Products" width="100%" style="border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;" />
+<img src="assets/admin_products.png" alt="Admin Products" width="100%" />
 
 Path: `/contacts` — Admin Contacts
-<img src="assets/admin_contacts.png" alt="Admin Contacts" width="100%" style="border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;" />
+<img src="assets/admin_contacts.png" alt="Admin Contacts" width="100%" />
 
 Path: `/reports` — Admin Reports
-<img src="assets/admin_reports.png" alt="Admin Reports" width="100%" style="border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;" />
+<img src="assets/admin_reports.png" alt="Admin Reports" width="100%" />
 
 Path: `/orders` — Manager Orders
-<img src="assets/manager_orders.png" alt="Manager Orders" width="100%" style="border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 6px;" />
+<img src="assets/manager_orders.png" alt="Manager Orders" width="100%" />
