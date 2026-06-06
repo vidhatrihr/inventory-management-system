@@ -39,6 +39,13 @@ def main():
         print("Capturing admin_products.png...")
         page.screenshot(path=os.path.join(assets_dir, 'admin_products.png'))
 
+        # Capture Github social preview (1600x800)
+        print("Capturing github-social-preview.png...")
+        page.set_viewport_size({"width": 1600, "height": 800})
+        page.wait_for_timeout(500)
+        page.screenshot(path=os.path.join(assets_dir, 'github-social-preview.png'))
+        page.set_viewport_size({"width": 1280, "height": 800})
+
         # Navigate to Contacts
         print("Navigating to Contacts...")
         page.click('text=Contacts')
