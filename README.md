@@ -87,9 +87,6 @@ python app.py
 
 Runs on `http://localhost:5000`. On first run, creates the database and seeds demo data.
 
-**Demo credentials:**
-- Admin: `admin@example.com` / `password123`
-- Manager: `manager@example.com` / `password123`
 
 ### Frontend
 
