@@ -2,28 +2,31 @@ import os
 from playwright.sync_api import sync_playwright
 
 inject_mac_ui = """() => {
-    // Create outer container to capture the shadow
+    // If captureArea already exists, just return to prevent double injection
+    if (document.getElementById('mac-capture-area')) return;
+
     const captureArea = document.createElement('div');
     captureArea.id = 'mac-capture-area';
     captureArea.style.padding = '40px';
     captureArea.style.background = 'transparent';
     captureArea.style.width = '1200px';
-    captureArea.style.height = '760px';
+    captureArea.style.minHeight = '760px';
+    captureArea.style.height = 'max-content';
     captureArea.style.boxSizing = 'border-box';
+    captureArea.style.display = 'flex';
+    captureArea.style.flexDirection = 'column';
 
-    // Create the macOS window
     const macWindow = document.createElement('div');
     macWindow.style.borderRadius = '12px';
     macWindow.style.overflow = 'hidden';
     macWindow.style.boxShadow = '0 25px 50px -12px rgba(0,0,0,0.5)';
     macWindow.style.border = '1px solid #333';
-    macWindow.style.backgroundColor = '#0f0f11'; // Match app bg
+    macWindow.style.backgroundColor = '#0f0f11';
     macWindow.style.width = '100%';
-    macWindow.style.height = '100%';
+    macWindow.style.flex = '1';
     macWindow.style.display = 'flex';
     macWindow.style.flexDirection = 'column';
 
-    // Create title bar
     const titlebar = document.createElement('div');
     titlebar.style.display = 'flex';
     titlebar.style.alignItems = 'center';
@@ -43,21 +46,19 @@ inject_mac_ui = """() => {
     
     const appContainer = document.createElement('div');
     appContainer.style.flex = '1';
-    appContainer.style.overflow = 'hidden'; // prevent scrolling if not needed
+    appContainer.style.overflow = 'visible';
     appContainer.style.position = 'relative';
     appContainer.style.display = 'flex';
     appContainer.style.flexDirection = 'column';
 
-    // Override any 100vh constraints in the app
     const style = document.createElement('style');
-    style.innerHTML = '.page-center { min-height: 100% !important; height: 100% !important; }';
+    style.innerHTML = '.page-center { min-height: 100% !important; height: auto !important; }';
     document.head.appendChild(style);
 
     app.parentNode.insertBefore(captureArea, app);
     appContainer.appendChild(app);
     
-    // Fix the 100vh issue so it centers perfectly in the new window
-    app.style.height = '100%';
+    app.style.height = 'max-content';
     app.style.minHeight = '100%';
     app.style.width = '100%';
 
@@ -65,6 +66,8 @@ inject_mac_ui = """() => {
     captureArea.appendChild(macWindow);
     
     document.body.style.background = 'transparent';
+    document.body.style.height = 'max-content';
+    document.documentElement.style.height = 'max-content';
 }
 """
 
@@ -122,7 +125,7 @@ def main():
         page.evaluate('''() => {
             const el = document.getElementById('mac-capture-area');
             el.style.width = '1200px';
-            el.style.height = '760px';
+            el.style.height = 'max-content';
         }''')
         page.set_viewport_size({"width": 1280, "height": 800})
 
