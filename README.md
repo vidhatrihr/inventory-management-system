@@ -43,18 +43,31 @@ inventory-management-system/
 
 ### API endpoints
 
+#### Auth
 | Method   | URL                    | Description              |
 | -------- | ---------------------- | ------------------------ |
 | `POST`   | `/api/register`        | Create account           |
 | `POST`   | `/api/login`           | Log in                   |
 | `POST`   | `/api/logout`          | Log out                  |
 | `GET`    | `/api/whoami`          | Current user info        |
+
+#### Products
+| Method   | URL                    | Description              |
+| -------- | ---------------------- | ------------------------ |
 | `GET`    | `/api/products`        | List all products        |
 | `POST`   | `/api/products`        | Create a product         |
 | `PUT`    | `/api/products/<id>`   | Update a product         |
 | `DELETE` | `/api/products/<id>`   | Delete a product         |
+
+#### Orders
+| Method   | URL                    | Description              |
+| -------- | ---------------------- | ------------------------ |
 | `GET`    | `/api/orders`          | List all orders          |
 | `POST`   | `/api/orders`          | Create an order          |
+
+#### Contacts
+| Method   | URL                    | Description              |
+| -------- | ---------------------- | ------------------------ |
 | `GET`    | `/api/suppliers`       | List all suppliers       |
 | `POST`   | `/api/suppliers`       | Create a supplier        |
 | `PUT`    | `/api/suppliers/<id>`  | Update a supplier        |
