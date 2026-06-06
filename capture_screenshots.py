@@ -52,14 +52,15 @@ inject_mac_ui = """() => {
     appContainer.style.flexDirection = 'column';
 
     const style = document.createElement('style');
-    style.innerHTML = '.page-center { min-height: 100% !important; height: auto !important; }';
+    style.innerHTML = '.page-center { flex: 1 !important; display: flex !important; flex-direction: column !important; justify-content: center !important; }';
     document.head.appendChild(style);
 
     app.parentNode.insertBefore(captureArea, app);
     appContainer.appendChild(app);
     
-    app.style.height = 'max-content';
-    app.style.minHeight = '100%';
+    app.style.flex = '1';
+    app.style.display = 'flex';
+    app.style.flexDirection = 'column';
     app.style.width = '100%';
 
     macWindow.appendChild(appContainer);
