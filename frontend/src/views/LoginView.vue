@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { apiRequest } from '@/utils/api.js'
 
 const router = useRouter()
 const email = ref('')
@@ -10,18 +11,16 @@ const error = ref('')
 async function login() {
   error.value = ''
   try {
-    const res = await fetch('http://localhost:5000/api/login', {
+    const res = await apiRequest('/login', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify({ email: email.value, password: password.value })
+      body: { email: email.value, password: password.value }
     })
     const data = await res.json()
     if (!res.ok) {
       error.value = data.message || 'Login failed'
       return
     }
-    router.push('/dashboard')
+    router.push('/orders')
   } catch (err) {
     error.value = 'Network error'
   }
