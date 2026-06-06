@@ -101,4 +101,8 @@ Runs on `http://localhost:5173`.
     <td><img src="assets/screenshot-3.png" alt="Screenshot 3" /></td>
     <td><img src="assets/screenshot-4.png" alt="Screenshot 4" /></td>
   </tr>
+  <tr>
+    <td><img src="assets/screenshot-5.png" alt="Screenshot 5" /></td>
+    <td><img src="assets/screenshot-6.png" alt="Screenshot 6" /></td>
+  </tr>
 </table>
