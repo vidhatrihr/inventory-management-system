@@ -9,7 +9,7 @@ inject_mac_ui = """() => {
     captureArea.id = 'mac-capture-area';
     captureArea.style.padding = '40px';
     captureArea.style.background = 'transparent';
-    captureArea.style.width = '1200px';
+    captureArea.style.width = '800px';
     captureArea.style.minHeight = '760px';
     captureArea.style.height = 'max-content';
     captureArea.style.boxSizing = 'border-box';
@@ -78,7 +78,7 @@ def main():
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        context = browser.new_context(viewport={'width': 1280, 'height': 800})
+        context = browser.new_context(viewport={'width': 880, 'height': 800})
         page = context.new_page()
 
         print("Navigating to login page...")
@@ -125,10 +125,10 @@ def main():
         # Restore size
         page.evaluate('''() => {
             const el = document.getElementById('mac-capture-area');
-            el.style.width = '1200px';
+            el.style.width = '800px';
             el.style.height = 'max-content';
         }''')
-        page.set_viewport_size({"width": 1280, "height": 800})
+        page.set_viewport_size({"width": 880, "height": 800})
 
         print("Navigating to Contacts...")
         page.click('text=Contacts')
