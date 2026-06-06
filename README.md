@@ -1,7 +1,7 @@
 # Inventory Management System
 
 <p align="center">
-  <img src="assets/screenshot-3.png" alt="Inventory Management System" width="75%" />
+  <img src="assets/admin_products.png" alt="Inventory Management System" width="100%" />
 </p>
 
 A role-based web application for tracking stock, recording orders, and managing supplier and customer contacts.
@@ -105,17 +105,20 @@ Runs on `http://localhost:5173`.
 
 ## Screenshots
 
-<table>
-  <tr>
-    <td><img src="assets/screenshot-1.png" alt="Screenshot 1" /></td>
-    <td><img src="assets/screenshot-2.png" alt="Screenshot 2" /></td>
-  </tr>
-  <tr>
-    <td><img src="assets/screenshot-3.png" alt="Screenshot 3" /></td>
-    <td><img src="assets/screenshot-4.png" alt="Screenshot 4" /></td>
-  </tr>
-  <tr>
-    <td><img src="assets/screenshot-5.png" alt="Screenshot 5" /></td>
-    <td><img src="assets/screenshot-6.png" alt="Screenshot 6" /></td>
-  </tr>
-</table>
+Path: `/` — Login page
+<img src="assets/login_page.png" alt="Login page" width="100%" />
+
+Path: `/orders` — Admin Orders
+<img src="assets/admin_orders.png" alt="Admin Orders" width="100%" />
+
+Path: `/products` — Admin Products
+<img src="assets/admin_products.png" alt="Admin Products" width="100%" />
+
+Path: `/contacts` — Admin Contacts
+<img src="assets/admin_contacts.png" alt="Admin Contacts" width="100%" />
+
+Path: `/reports` — Admin Reports
+<img src="assets/admin_reports.png" alt="Admin Reports" width="100%" />
+
+Path: `/orders` — Manager Orders
+<img src="assets/manager_orders.png" alt="Manager Orders" width="100%" />
