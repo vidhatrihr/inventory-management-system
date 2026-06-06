@@ -8,10 +8,6 @@ A role-based web application for tracking stock, recording orders, and managing 
 
 **Stack:** Flask · SQLite · Vue 3 (Vite)
 
-**Demo credentials:**
-- Admin: `admin@example.com` / `password123`
-- Manager: `manager@example.com` / `password123`
-
 ---
 
 ## Project Structure
@@ -90,6 +86,10 @@ python app.py
 ```
 
 Runs on `http://localhost:5000`. On first run, creates the database and seeds demo data.
+
+**Demo credentials:**
+- Admin: `admin@example.com` / `password123`
+- Manager: `manager@example.com` / `password123`
 
 ### Frontend
 
