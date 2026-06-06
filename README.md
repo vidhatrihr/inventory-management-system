@@ -102,9 +102,6 @@ Runs on `http://localhost:5173`.
 
 ## Screenshots
 
-Path: `/` — Login page
-<img src="assets/login_page.png" alt="Login page" width="100%" />
-
 Path: `/orders` — Admin Orders
 <img src="assets/admin_orders.png" alt="Admin Orders" width="100%" />
 
@@ -119,3 +116,6 @@ Path: `/reports` — Admin Reports
 
 Path: `/orders` — Manager Orders
 <img src="assets/manager_orders.png" alt="Manager Orders" width="100%" />
+
+Path: `/` — Login page
+<img src="assets/login_page.png" alt="Login page" width="100%" />
